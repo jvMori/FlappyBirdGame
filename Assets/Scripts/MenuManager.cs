@@ -8,14 +8,12 @@ public class MenuManager : MonoBehaviour {
 
 
     public static bool turnOnOff = true;
+    
     [SerializeField]
     private Text sound;
     
 
-    private void Awake()
-    {
-        
-    }
+    
     public void Play()
     {
         SceneManager.LoadScene("Main");

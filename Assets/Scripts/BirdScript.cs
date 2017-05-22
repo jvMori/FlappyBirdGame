@@ -27,17 +27,21 @@ public class BirdScript : MonoBehaviour {
 
 	public Button flapButton;
 
-	void Awake () {
+    public GameObject tapToPlayObject;
+
+    void Awake () {
 		if (instance == null) {
 			instance = this;
 		}
 
 		isAlive = true;
+        tapToPlayObject.SetActive(true);
 
         myRigidBody.isKinematic = true;
 
 		flapButton = GameObject.FindGameObjectWithTag ("FlapButton").GetComponent<Button> ();
         flapButton.onClick.AddListener(() => myRigidBody.isKinematic = false);
+        flapButton.onClick.AddListener(() => tapToPlayObject.SetActive(false));
         flapButton.onClick.AddListener (() => BirdIsFlapping());
 
 	}

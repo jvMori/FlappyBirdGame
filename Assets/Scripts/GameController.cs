@@ -8,7 +8,9 @@ public class GameController : MonoBehaviour {
 	public static GameController instance;
 	public GameObject gameOverText;
 	public bool gameOver = false;
-	public float scrollSpeed = -1f;
+
+   
+    public float scrollSpeed = -1f;
 	public Text scoreText;
 
 
